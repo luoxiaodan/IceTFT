@@ -15,7 +15,7 @@ The loss function is modified to use mean square error.
 
 #Step1: Setting expt_settings\configs.py 
 #'ice' presents the daily SIE prediction; 'icemonthly' presents the monthly SIE prediction
-default_experiments = ['ice', 'icemonthly']
+default_experiments = ['icedaily', 'icemonthly']
 Add an entry in ``data_csv_path`` mapping the experiment name to name of the csv file containing the data
 
 #Step2: Downloading data

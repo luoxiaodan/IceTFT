@@ -21,7 +21,7 @@ for the main experiments used in the publication.
 """
 
 import os
-import data_formatters.ice
+import data_formatters.icedaily
 import data_formatters.icemonthly
 
 class ExperimentConfig(object):
@@ -38,7 +38,7 @@ class ExperimentConfig(object):
       experiment.
   """
 
-  default_experiments = ['ice','icemonthly']
+  default_experiments = ['icedaily','icemonthly']
 
   def __init__(self, experiment='volatility', root_folder=None):
     """Creates configs based on default experiment chosen.
@@ -75,7 +75,7 @@ class ExperimentConfig(object):
   @property
   def data_csv_path(self):
     csv_map = {
-        'ice': 'ice_data.csv',
+        'icedaily': 'ice_daily.csv',
         'icemonthly': 'ice_monthlymuti.csv'
     }
 
@@ -94,7 +94,7 @@ class ExperimentConfig(object):
     """
 
     data_formatter_class = {
-        'ice': data_formatters.ice.IceFormatter,
+        'icedaily': data_formatters.icedaily.IceFormatter,
         'icemonly': data_formatters.icemonly.IcemonlyFormatter
     }
 
